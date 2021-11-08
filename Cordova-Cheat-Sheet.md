@@ -1,5 +1,7 @@
 # Cordova
 
+Cordova Cheat Sheet.
+
 ## Commands 
 
 ### Adding Build Platform  
