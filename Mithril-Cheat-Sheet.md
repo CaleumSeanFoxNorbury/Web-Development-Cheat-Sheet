@@ -2,6 +2,43 @@
 
 JavaScript framework for building frontend web-components.
 
+## Quick Start With Webpack Installaton 
+
+Mithril can be installed to JavaScript application by initalising the application as an NPM module and installing the packages through that manager.
+
+```
+npm init --yes
+npm install mithril --save
+npm install webpack webpack-cli --save-dev
+```
+
+Add a run entry script `package.json`
+
+```
+{
+ // ...
+ "scripts": {
+     "start": "webpack src/index.js --output bin/app.js -d --watch"
+ }
+}
+```
+
+render body of the mithril components within `src/index.html`
+
+```
+import m from "mithril";
+m.render(document.body, "hello world");
+```
+
+create applications entry point in `index.html`
+
+```
+<!DOCTYPE html>
+<body>
+ <script src="bin/app.js"></script>
+</body>
+```
+
 ## Syntax 
 
 ### vnodes
