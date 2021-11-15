@@ -1,5 +1,14 @@
 # React 
 
+## Components LifeCycle 
+
+When a component is created, its lifecycle will be a flow of functions within order:
+ 
+- constructor()
+- static getDerivedStateFromProps()
+- render()
+- componentDidMount()
+
 ## Commands 
 
 ### Creating a React Project
