@@ -9,6 +9,14 @@ When a component is created, its lifecycle will be a flow of functions within or
 - render()
 - componentDidMount()
 
+## JSF
+
+JSF is a syntax extention for Javascript. 
+
+```
+  TODO
+```
+
 ## Commands 
 
 ### Creating a React Project
