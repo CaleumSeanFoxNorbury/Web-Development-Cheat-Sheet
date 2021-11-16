@@ -1,0 +1,35 @@
+{
+    "name": "app-name",
+    "version": "0.0.1",
+    "description": "",
+    "main": "src/index.ts",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "start": "npm-run-all -c -n -l -p live-build live-watch live-serve"
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+
+    },
+    "dependencies": {
+
+    },
+    "cordova": {
+      "plugins": {
+        "cordova-plugin-whitelist": {},
+        "cordova-plugin-inappbrowser": {},
+        "cordova-plugin-geolocation": {
+          "GPS_REQUIRED": "true"
+        },
+        "cordova-plugin-ionic-webview": {},
+        "cordova-plugin-statusbar": {}
+      },
+      "platforms": [
+        "browser",
+        "android",
+        "ios"
+      ]
+    }
+  }
+  
