@@ -65,9 +65,9 @@ virtual nodes are nodes from a virtual DOM tree which acts similar to a schema o
 
 ## Skeletons
 
-Blank templates for easy setup and fast coding. 
+Blank templates for easy setup and fast coding. These are basic and usually dont contain all resources.
 
-# Component Skeleton 
+### Component Skeleton 
 
 ```
 // scss imports ...
