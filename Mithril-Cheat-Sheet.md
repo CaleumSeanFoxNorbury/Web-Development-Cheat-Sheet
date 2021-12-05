@@ -54,10 +54,10 @@ virtual nodes are nodes from a virtual DOM tree which acts similar to a schema o
 ```
   m('div', {style: 'height: 200px'}),
           
-  m(Button, {
+  m(Component, {
     className: 'have-a-nice-day',
-    onclick: () => { m.route.set('#') },
-    fill: true
+    callback: () => { m.route.set('#') },
+    attr: true
   }, 'Have a nice day!'),
           
   m('div', 'Have a nice day!'),
