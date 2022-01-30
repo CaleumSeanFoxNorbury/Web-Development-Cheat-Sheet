@@ -54,11 +54,41 @@ virtual nodes are nodes from a virtual DOM tree which acts similar to a schema o
 ```
   m('div', {style: 'height: 200px'}),
           
-  m(Button, {
+  m(Component, {
     className: 'have-a-nice-day',
-    onclick: () => { m.route.set('#') },
-    fill: true
+    callback: () => { m.route.set('#') },
+    attr: true
   }, 'Have a nice day!'),
           
   m('div', 'Have a nice day!'),
+```
+
+## Skeletons
+
+Blank templates for easy setup and fast coding. These are basic and usually dont contain all resources.
+
+### Component Skeleton 
+
+```
+// scss imports ...
+import './style.scss'
+
+// module and component imports ...
+import m from 'mithril';
+
+export default function Dashboard(): m.Component {
+  // global component code ...
+  const res: m.Component = {
+    oncreate() {
+      // runs after the DOM element is created and attached to the document
+    },
+    view() {
+      // containerized view code ...
+      return m('div');
+      // return the vuew
+    }
+  };
+
+  return res;
+}
 ```
