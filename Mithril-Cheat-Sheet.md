@@ -95,4 +95,4 @@ export default function Dashboard(): m.Component {
 
 ## Generic Page Content
 
-Generic page content 
+Generic page content can be be used to have keep related content together in the same file. Compoennt `attrs` can be used to gather url parameters which can condition which view to use.
