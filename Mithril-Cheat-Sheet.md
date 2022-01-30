@@ -92,3 +92,7 @@ export default function Dashboard(): m.Component {
   return res;
 }
 ```
+
+## Generic Page Content
+
+Generic page content 
