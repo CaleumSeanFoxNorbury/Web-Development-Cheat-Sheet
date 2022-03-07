@@ -4,7 +4,7 @@
 
 Turning a variable to a boolean expression can easily be done by using the shorthand (`!!`) syntax. This allows variables to be turned into boolean expressions.
 
-**Example: **
+**Example:**
 
 `(!!variable) ? doSomething() : doSomethingElse()`
 
