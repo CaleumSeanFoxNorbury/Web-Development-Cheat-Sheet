@@ -2,8 +2,11 @@ MomentJS is very useful and contains functionality for managing time around code
 
 The mentioned functionality can be done with raw JavaScript or typescript for better type conditioning, to save your project the space and having a more generic way of dealing with time your own way.
 
+
+### Find the current day of the week
+
 ```
-function currDayOfWeek(date?: Date): string {
+function getCurrDayOfWeek(date?: Date): string {
   const dayNames = [
     'sunday',
     'monday',
@@ -20,8 +23,12 @@ function currDayOfWeek(date?: Date): string {
     return dayNames[date.getDay()];
   }
 }
+```
 
-function formatDate(date: Date): string {
+### Formate Date obj into string  
+
+```
+function formatDateTString(date: Date): string {
   var ampm: string = date.getHours() >= 12 ? 'pm' : 'am';
   let paddedMonth: string = ('0' + (date.getMonth() + 1)).slice(-2);
   let minutes = date.getMinutes().toString().length == 1 ?
@@ -31,13 +38,21 @@ function formatDate(date: Date): string {
       date.getFullYear() + ' - ' + date.getHours() + ':' + minutes + ' ' +
       ampm.toUpperCase()
 }
+```
 
-getMonthsFromRange(startDate: Date, endDate: Date) {
+## Get months count from date range 
+
+```
+getMonthsFromDateRange(startDate: Date, endDate: Date) {
   return Math.abs(
       endDate.getMonth() - startDate.getMonth() +
       (12 * (endDate.getFullYear() - startDate.getFullYear())));
 }
+```
 
+### MomentJS's 'fromNow' function
+
+```
 // One of the most popular used functions from MomentJS, this function is completely customisable and can be manipulated to fit your personal projects
 function fromNow(endDate: Date, startDate?: Date): string {
   // if `startDate` is undefined, then use date from now  
@@ -104,11 +119,19 @@ function fromNow(endDate: Date, startDate?: Date): string {
     }
   }
 }
+```
 
-function daysInMonth(month: number, year: number) {
+### Get how many days within a month 
+
+```
+function getDaysInMonth(month: number, year: number) {
   return new Date(year, month, 0).getDate();
 }
+```
 
+### Create date object from time string 
+
+```
 function getDateObjectFromTimeString(
     twelveHourTimeString: string, date?: Date): Date {
   var now = !date ? new Date() : date;
@@ -123,11 +146,19 @@ function getDateObjectFromTimeString(
 
   return now;
 }
+```
 
+###  Date object to a unix timestamp string
+
+```
 function dateToUnixTimeStamp(date: Date): number {
   return Math.floor(date.getTime() / 1000);
 }
+```
 
+### add Seconds to date obejct
+
+```
 function addSecondsToDateObject(
     manipulationValue: number, date?: Date): Date {
   if (!date) {
@@ -138,16 +169,24 @@ function addSecondsToDateObject(
 
   return new Date((unix + manipulationValue) * 1000);
 }
+```
 
-function unixTimestampToHoursAndMinutes(unixstamp: number) {
+### Unix timetamp to hours and minutes string 
+
+```
+function convertUnixTimestampToHoursAndMinutes(unixstamp: number) {
   var date = new Date(unixstamp * 1000);
   var minutes = '0' + date.getMinutes();
 
   // negative values in slice can revert the start of the string index
   return date.getHours() + ':' + minutes.slice(-2);
 }
+```
 
-function unixTimestampToDate(unixstamp: number): Date {
+### Convert unix timestamp to date object
+
+```
+function convertUnixTimestampToDate(unixstamp: number): Date {
   var date = new Date(0);
   date.setUTCSeconds(unixstamp);
 
