@@ -2,6 +2,7 @@ MomentJS is very useful and contains functionality for managing time around code
 
 The mentioned functionality can be done with raw JavaScript or typescript for better type conditioning, to save your project the space and having a more generic way of dealing with time your own way.
 
+***Please Note:*** These functions have been mirrored from MomentJS and function just as MomentJS's functions do however now have the customisation abilities and less package dependencies.
 
 ### Find the current day of the week
 
