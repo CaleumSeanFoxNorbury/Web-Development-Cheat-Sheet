@@ -39,7 +39,7 @@ Inlcude a sign in button like below:
 <div id="appleid-signin" data-color="black" data-border="true" data-type="sign in"></div>
 ```
 
-This btn will send all authorization information to apple and apple will return HTTP POST request back will all processes info and the auth results. This information will be sent to the URL provided within redirectURI which should be a server side endpoint ready to process the results our side.
+This btn will send all authorization information to apple and apple will return HTTP POST request back will all processes info and the auth results. This information will be sent to the URL provided within redirectURI which should be a local endpoint ready to process the results our side.
 
 ### Response 
 
@@ -91,8 +91,15 @@ document.addEventListener('AppleIDSignInOnFailure', (event) => {
 
 ## Server Side 
 
+### Authorization endpoint
+
+When a request has been made from the client-side, the frontend will catch success or fail apple authorixation requests and send the containing auth request results to be processed. This includes:
+
 ```
-// todo
+    code
+    id_token
+    state
+    user
 ```
 
 ## Referances 
