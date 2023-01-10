@@ -1,6 +1,6 @@
-# Implmentation of Apple Pay
+# implementation of Apple Pay
 
-Full-stack implemntation of apple pay. 
+Full-stack implementation of apple pay. 
 
 ## Client Side 
 
