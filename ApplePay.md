@@ -93,7 +93,7 @@ document.addEventListener('AppleIDSignInOnFailure', (event) => {
 
 ### Authorization endpoint
 
-When a request has been made from the client-side, the frontend will catch success or fail apple authorixation requests and send the containing auth request results to be processed. This includes:
+When a request has been made from the client-side, the frontend will catch success or fail apple auth requests and send the containing auth request results to be processed within a desired endpoint. This includes:
 
 ```
     code
