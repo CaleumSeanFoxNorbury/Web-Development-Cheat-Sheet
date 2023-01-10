@@ -53,8 +53,11 @@ Indluded within the authorization response success:
 ```
 
 `code`: a single-use auth code that expires within five minutes. Used to validate the response.
+
 `id_token`: a JSON web token containing user identification information.
+
 `state`: a string passed by the init function, mirroring the state of the auth request.
+
 `user`: a JSON string containing the data requested in the scope property of the framework auth object.
 
 Indluded within the authorization response fail:
@@ -65,6 +68,7 @@ Indluded within the authorization response fail:
 ```
 
 `error`: the returned error code to be matched by apple giving a reason to the failure.
+
 `state`: a string passed by the init function, mirroring the state of the auth request.
 
 ### If using the popup option?
