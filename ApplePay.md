@@ -1,4 +1,4 @@
-# implementation of Apple Pay
+# Implementation of Apple Pay
 
 Full-stack implementation of apple pay. 
 
