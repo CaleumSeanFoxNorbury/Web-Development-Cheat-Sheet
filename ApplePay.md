@@ -102,6 +102,28 @@ When a request has been made from the client-side, the frontend will catch succe
     user
 ```
 
+### Validate the authorization code 
+
+A `POST` request should be made to apples following endpoint for validating the `code` gathered from the frontend:
+
+```
+https://appleid.apple.com/auth/token
+```
+
+**Params:**
+
+```
+{
+  client_id
+  client_secret
+  code
+  grant_type
+  redirect_uri 
+}
+```
+
+
+
 ## Referances 
 
 Apple Pay [2022] - https://developer.apple.com/documentation/sign_in_with_apple/sign_in_with_apple_js/configuring_your_webpage_for_sign_in_with_apple
