@@ -2,6 +2,24 @@
 
 Full-stack implementation of apple pay. 
 
+## Project API Schema
+
+**Auth with Apple**
+
+`POST`
+
+`/api/register-login/oauth/apple`
+
+```
+{
+    "userid": "asdsfdgdsgf",
+    "email": "test@test.com",
+    "forename": "firstname",   
+    "surname": "secondname",
+    "token": "ldkjfgjkdfsgjldfglk"
+}
+```
+
 ## Client Side 
 
 ### Embedded script tag
