@@ -122,7 +122,20 @@ https://appleid.apple.com/auth/token
 }
 ```
 
+### Validate an existing refresh token
 
+When validating an existing refresh token, include the following params within the `POST` request:
+
+`"https://appleid.apple.com/auth/token"`
+
+```
+{
+  client_id
+  client_secret  
+  grant_type
+  redirect_uri 
+}
+```
 
 ## Referances 
 
