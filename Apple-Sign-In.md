@@ -1,4 +1,4 @@
-# Implementation of Apple Pay
+# Implementation of Apple Sign In
 
 Full-stack implementation of apple pay. 
 
