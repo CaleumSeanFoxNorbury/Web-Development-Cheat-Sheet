@@ -157,6 +157,6 @@ When validating an existing refresh token, include the following params within t
 
 ## Referances 
 
-Apple Pay (Client-Side) [2022] - https://developer.apple.com/documentation/sign_in_with_apple/sign_in_with_apple_js/configuring_your_webpage_for_sign_in_with_apple
+Apple Sign-in (Client-Side) [2022] - https://developer.apple.com/documentation/sign_in_with_apple/sign_in_with_apple_js/configuring_your_webpage_for_sign_in_with_apple
 
-Apple Pay (Server-Side) [2022] - https://developer.apple.com/documentation/sign_in_with_apple/generate_and_validate_tokens
+Apple Sign-in (Server-Side) [2022] - https://developer.apple.com/documentation/sign_in_with_apple/generate_and_validate_tokens
