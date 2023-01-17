@@ -2,23 +2,9 @@
 
 Full-stack implementation of apple pay. 
 
-## Project API Schema
+## Sequence Diagram and API Schema
 
-**Auth with Apple**
-
-`POST`
-
-**Example:** `/api/oauth/apple`
-
-```
-{
-    "userid": "asdsfdgdsgf",
-    "email": "test@test.com",
-    "forename": "firstname",   
-    "surname": "secondname",
-    "token": "ldkjfgjkdfsgjldfglk"
-}
-```
+![image](https://user-images.githubusercontent.com/33324819/212952227-63eb545d-b94c-4fa1-9894-40ba64a37d6c.png)
 
 ## Client Side 
 
