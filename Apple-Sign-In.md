@@ -8,7 +8,7 @@ Full-stack implementation of apple pay.
 
 `POST`
 
-`/api/register-login/oauth/apple`
+**Example:** `/api/oauth/apple`
 
 ```
 {
