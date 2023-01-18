@@ -41,6 +41,32 @@ const redComponent = palette.red.at(0);
 const greenNormalized = palette.green.toUpperCase();
 ```
 
+These checks are very useful for when a value can be several types. **Example:**
+
+```
+interface ExampleNumbers {
+   numberOne: 1,
+   numberTwo: 2,
+   numberThree: 3
+}
+
+let x: Number|ExampleNumbers;
+
+function getNumbers(){
+    return 'x';
+}
+
+function getNumber(){
+    return 5;
+}
+
+if(...){
+    x = getNumber() satisfies Number;  
+} else {
+    x = getNumbers() satisfies ExampleNumbers;
+}
+```
+
 ### Recursive type aliases.
 
 // todo 
