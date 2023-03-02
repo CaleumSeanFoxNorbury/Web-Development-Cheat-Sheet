@@ -119,6 +119,7 @@ function x(obj : Colour|Attrs){
     if ("stalk" in obj) { // "stalk" its of type "Attrs" narrowing its type
         // 'stalk' now has the type Attrs
     }
+}
 ```
 
 **Referneces:**
