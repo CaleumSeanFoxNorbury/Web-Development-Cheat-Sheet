@@ -88,7 +88,39 @@ main().catch(console.error);
 
 // todo
 
+### Unlisted property narrowing with the `in` operator 
 
-Ref:
+While using the `in` operator we can now narrow down its type when a key value has been specified within a value with several types.
+
+**Example:**
+
+```
+interface Colour {
+    red: number;
+    green: number;
+    blue: number;
+}
+
+interface Attrs {
+    stalk: number;
+    pettle: number;
+    leaf: number;
+}
+
+// old way ...
+function x(obj : Colour|Attrs){
+    if (let stalk in (<Attrs>obj)) { // defining its type first
+        // 'stalk' now has the type Attrs
+    }
+}
+
+// new way ...
+function x(obj : Colour|Attrs){
+    if ("stalk" in obj) { // "stalk" its of type "Attrs" narrowing its type
+        // 'stalk' now has the type Attrs
+    }
+```
+
+**Referneces:**
 
 [2023] https://devblogs.microsoft.com/typescript/announcing-typescript-4-9/
