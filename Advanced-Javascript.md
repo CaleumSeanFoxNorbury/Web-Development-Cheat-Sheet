@@ -16,31 +16,17 @@ Clang-Formatter is a coding fomatter for C# and is used to format and orangise c
 
 **Reference:** - https://llvm.org/
 
-## Find all unique items within an array 
+## Arrays 
+
+### Find all unique items within an array 
+
+The below statement works by first filtering duplicates and none duplicates into their own arrays that is returned by `.filter`; then filtering each array if their length is equal to `1` meaning no duplicates.
+
+`chars.filter(y => x === y)` returning an array for each value including their duplciates. Filtering this value by checking each arrays length against `1` will remove all arrays with duplicates. 
 
 ```
-var scores = [12, 12, 5, 3, 5, 6, 6];
-let res = [];
+let chars = ['A', 'B', 'A', 'C', 'B'];
+let nonDuplicates = chars.filter(x => chars.filter(y => x === y).length === 1)
 
-scores.forEach(score => {
-  var x = score;
-  var index = scores.indexOf(x);  
-  
-  if(index !== -1){
-    // remove the item
-    scores.splice(index, 1);
-  }
-  
-  if(!scores.includes(x)){
-    res.push(x);
-  } else {    
-    index = scores.indexOf(x);   
-    if(index !== -1){
-      // remove the item
-      scores.splice(index, 1);
-    } 
-  }     
-});
-
-console.log(res); 
+console.log(nonDuplicates);
 ```
