@@ -29,8 +29,16 @@ npm install -g create-react-app
 
 After, create the React application.
 
+A Template parameter can be added to this command to allow different environments your app will be built in.
+
+**Template Example**: `npx create-react-app my-app --template typescript`.
+
 **Example Parameters(!param)**: name of application: `my-app`, `react-app`, `app-name`
 
+**Template Example**: `npx create-react-app my-app --template typescript
+
 ```
-create-react-app !param
+create-react-app !param --template typescript
 ```
+
+
