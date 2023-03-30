@@ -1,6 +1,6 @@
 # PHP
 
-Converting file to pdf
+## Converting file to PDF
 
 Files with variables (e.g., docx, doc, text) are converted by running through a collection of variables and using PHPWord template processor to set the value (this is done by using zip archive to run through the directories and changing values within `word/document.xml` where the document content is stored). Once the variables have been converted, we save the file within a temp folder.
 After the variable conversion process has finished, we then need to convert the new temp file to pdf for outputting. This is done by using PHPWord and setting its PDF renderer using TCPDF PHP extension:
