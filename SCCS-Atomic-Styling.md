@@ -33,7 +33,6 @@ A benefical example of using atmoic-styling using flex:
   justify-content: flex-start;
 }
 
-
 .justify-fe{
   justify-content: flex-end;
 }
@@ -88,6 +87,21 @@ Within cacading style sheets we cane add variables to make classes more generic.
 // using different types 
 <div class="height100px"></div>
 <div class="height100%"></div>
+
+.size#{$size}{
+  min-width: $size;
+  max-width: $size;
+  min-height: $size;
+  max-height: $size;  
+}
+
+<div class="size100px"></div>
+
 ```
 
+
 # Loops 
+
+```
+// todo ...
+```
