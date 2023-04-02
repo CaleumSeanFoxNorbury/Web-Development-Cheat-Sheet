@@ -71,3 +71,23 @@ A benefical example of using atmoic-styling using flex:
 --------------------------------
 
 ```
+
+# Variables 
+
+Within cacading style sheets we cane add variables to make classes more generic. For exmaple we can have a combine atmoic styling practice with variables to make a reuseable, generic class:
+
+```
+.width#{$width}{
+  width: $width;
+}
+
+.height#{$height}{
+  height: $height;
+}
+
+// using different types 
+<div class="height100px"></div>
+<div class="height100%"></div>
+```
+
+# Loops 
