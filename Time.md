@@ -1,6 +1,6 @@
 # Time
 
-MomentJS is very useful and contains functionality for managing time around code. However, packages sizes and external libraries can depend upon so much more than what’s use being used and causes package sizes to dramatically increase.
+MomentJS is very useful and contains functionality for managing time around code. However, packages sizes and external libraries can depend upon so much more than what’s being used and causes package sizes to dramatically increase.
 
 The mentioned functionality can be done with raw JavaScript or typescript for better type conditioning, to save your project the space and having a more generic way of dealing with time your own way.
 
