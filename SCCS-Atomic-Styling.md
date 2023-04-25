@@ -102,6 +102,36 @@ Within cacading style sheets we cane add variables to make classes more generic.
 
 # Loops 
 
+Using variables to loop over atomic classes for quick and easy development that can be used generically around a project.
+
 ```
-// todo ...
+/* Margin / Padding utility classes, same as bootstrap with the - removed */
+@for $ii from 0 through 10 {
+  .m#{$ii} { margin: $ii * 4px !important; }
+  .mt#{$ii} { margin-top: $ii * 4px !important; }
+  .ml#{$ii} { margin-left: $ii * 4px !important; }
+  .mr#{$ii} { margin-right: $ii * 4px !important; }
+  .mb#{$ii} { margin-bottom: $ii * 4px !important; }
+  .mx#{$ii} { 
+    margin-left: $ii * 4px !important; 
+    margin-right: $ii * 4px !important; 
+  } 
+  .my#{$ii} { 
+    margin-top: $ii * 4px !important; 
+    margin-bottom: $ii * 4px !important;
+  }
+  .p#{$ii} { padding: $ii * 4px !important; }
+  .pt#{$ii} { padding-top: $ii * 4px !important; }
+  .pl#{$ii} { padding-left: $ii * 4px !important; }
+  .pr#{$ii} { padding-right: $ii * 4px !important; }
+  .pb#{$ii} { padding-bottom: $ii * 4px !important; }
+  .px#{$ii} { 
+    padding-left: $ii * 4px !important; 
+    padding-right: $ii * 4px !important; 
+  }
+  .py#{$ii} { 
+    padding-top: $ii * 4px !important; 
+    padding-bottom: $ii * 4px !important; 
+  }
+}
 ```
