@@ -1,4 +1,4 @@
-# Atomic Styling
+# Atomic, Variable and Looped Styling
 
 Used by Bootstrap and more, Atmoic Styling is a techique of having small descriptive classes that can be used in-line with elements across a codebase so each element doesnt have their own class which can have re-written code that applies to another element.
 
