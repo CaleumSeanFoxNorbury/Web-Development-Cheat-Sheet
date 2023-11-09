@@ -1,16 +1,20 @@
 # GitHub Cheat Sheet
 
-Git Commands and actions.
+**Git Commands and actions.**
 
 ## Command And Document Keys 
 
 `[ PLACEHOLDER ]` - command input parameter
 
-`--PLACEHOLDER` - command parameter   
+`--PLACEHOLDER` - command parameter
+
+`local branch` - locally pulled down remote branch, stored locally
+
+`remote branch` - branch stored on github servers, diffs from local branch if any local changes are made
 
 ## Setup And Init 
 
-Setting up account/user information that is used across the GitHub instance and is applied to all local repositories.
+**Setting up account/user information that is used across the GitHub instance and is applied to all local repositories.**
 
 ### Configuring Account 
 
@@ -22,7 +26,7 @@ Setting up account/user information that is used across the GitHub instance and 
 
 ## Commits And Staging 
 
-Git staging area
+**Git staging area**
 
 `git status` - show modified files in working dir, these will be the changes within the next commit
 
@@ -38,7 +42,7 @@ Git staging area
 
 ## Branches And Merging
 
-Isloating, changing, and intgrating branchs 
+**Isloating, changing, and intgrating branchs** 
 
 `git branch` - list of branches, show current active branch with a `*` 
 
@@ -50,15 +54,63 @@ Isloating, changing, and intgrating branchs
 
 `git log` - show all commits in branch history
 
-## Compare
+## Inspect And Compare
+
+**Exploring logs, differences and object information**
+
+`git log` - show commit tree fro current active branch
+
+`git log branchB..branchA` - showe commits from branchA that arnt in branchB
+
+`git log --follow [file]` - show commits from manipulated specified file
+
+`git diff branchB..branchA` - show diff of whats in branchA thats not in branchB
+
+`git show [SHA]` - show any git object in human readable format
 
 ## Fetch(Update), Pull(Fetch & Merge) And Share
 
+**Fethcing and updating local repositories and updates from remote repositories**
+
+`git remote add [alias] [url]` - add a git url as a alias
+
+`git fetch [alias]` - fetch down all branches and their changes from git remote specified by the alias
+
+`git merge [alias]/[branch]` - merge a remote branchs changes into current branch(this could cause merge conflicts to be resolved) 
+
+`git push [alias] [branch]` - push local branch changes to remote branch 
+
+`git pull` - fetch and merge any changes (commits) from the tracking (current) remote branch  
+
 ## Tracking 
+
+**Vesioning and removing files and file paths**
+
+`git rm [file]` - delete file and stage the removal for next commit
+
+`git mv [existing-branch-path] [new-path]` - change existing file path and stage the move for next commit
+
+`git log --stat -M` - showing all commit logs, with highlighted any paths that have been manipulated
 
 ## Rewrite History 
 
+**Rewritting changes to branches, updating commits and clearing history**
+
+`git rebase [branch]` - apply all commits of current ative branch ahead of specified one, keeps git tree clean with updates
+
+`git reset --hard [commit]` - clear staging area, rewrite working tree from specified commit 
+
 ## Temp And Stashes
+
+**Temp store changes from tracked files**
+
+`git stash` - saved manipulated and staged changes
+
+`git stash list` - list `stack-order` of stashed file changes
+
+`git stash pop` - write workingt from top of stash stack
+
+`git stash drop` - discard the changes from top of stash-stack
 
 ## Reference 
 
