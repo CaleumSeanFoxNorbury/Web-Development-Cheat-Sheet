@@ -38,7 +38,17 @@ Git staging area
 
 ## Branches And Merging
 
-``
+Isloating, changing, and intgrating branchs 
+
+`git branch` - list of branches, show current active branch with a `*` 
+
+`git branch [branch-name]` - create a new branch within the current commit
+
+`git checkout` - switch branches, and check it out into your working dir
+
+`git merge [branch]` - merge branches history (commit tree) into current active branch
+
+`git log` - show all commits in branch history
 
 ## Compare
 
