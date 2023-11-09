@@ -112,6 +112,21 @@
 
 `git stash drop` - discard the changes from top of stash-stack
 
+
+## .gitignore
+
+Adding a git ignore file will allow git to ignore certain files or directories that shouldn’t be pushed to githubs servers, these files should be applied to dependency directories or files containing sensitive information, please remember as soon as code has been pushed, the information will forever like within the commit tree and can be retrieved. Any exposed keys or passwords should be changed immediately.
+
+**Example:**
+
+```
+    /directoryPath
+```
+
+Once a change has happened within the `.gitignore` file, then the command below will need to be run for these changes to be applied.
+
+`git rm -r --cached [file/folder path]`
+
 ## Reference 
 
 ### [2023] GitHub Education - https://education.github.com/git-cheat-sheet-education.pdf
