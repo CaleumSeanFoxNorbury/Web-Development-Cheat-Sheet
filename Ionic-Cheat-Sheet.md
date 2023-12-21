@@ -36,6 +36,8 @@ Using Ionic storage, we are able to store our data securly and is compatible wit
 
 IOS builds can be easily configured and ran out for any Apple devices and work well for consdierations and requirements for their application store.
 
+...
+
 ***Tips***
 
 ### IOS Simulator
