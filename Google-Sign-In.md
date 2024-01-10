@@ -1,5 +1,7 @@
 # Google sign-in
 
+Before implmentation, please create a `clientID` with all relevent data from the google developer dashboard - https://developers.google.com/identity/gsi/web/guides/get-google-api-clientid 
+
 ## Init 
 
 ```
