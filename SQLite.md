@@ -43,9 +43,11 @@ After inserting the converted documents into the database, we were able to succe
 
 ### Conclusion 
 
-```
-todo
-```
+After conducting extensive research and analysis, it is clear that there are remarkable similarities between the Linux operating system and Android's operating system. Through this research, it was discovered that Samsung devices use Linux versions of their kernels, which explains the similarities between the CLI commands and processing involved in both systems. This newfound knowledge has shed further light on how Android systems work.
+
+As a result of this research, we have developed a quick and effective solution to address the issue of SQLite database debugging. This solution has the potential to revolutionize the way developers approach debugging, and could significantly improve the efficiency and accuracy of the process.
+
+Overall, this research has not only provided a valuable solution to a pressing issue, but has also deepened our understanding of the underlying principles of operating systems and software development. We believe that these findings will have a significant impact on the field of computer science and will pave the way for further innovation and advancement in the years to come.
 
 ### Additional Information 
 
@@ -53,3 +55,4 @@ Refernece:
 
 - [2024] https://stackoverflow.com/questions/65058335/android-studio-database-inspector-always-showing-database-as-closed - Closer look at the main issue related to this report around inspecting SQLite databases.
 - [2024] https://forum.ionicframework.com/t/prepopulated-sqlite-databases-in-ionic/6558/20 - example forum research.
+- [2024] https://eu.community.samsung.com/t5/tablets/linux-device-masquerading-as-galaxy-tab-a/td-p/4473805 - Samsung forums detailing similarities between linux and Android
