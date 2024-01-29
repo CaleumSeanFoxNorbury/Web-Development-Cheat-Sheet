@@ -49,8 +49,6 @@ As a result of this research, we have developed a quick and effective solution t
 
 Overall, this research has not only provided a valuable solution to a pressing issue, but has also deepened our understanding of the underlying principles of operating systems and software development. We believe that these findings will have a significant impact on the field of computer science and will pave the way for further innovation and advancement in the years to come.
 
-### Additional Information 
-
 Refernece: 
 
 - [2024] https://stackoverflow.com/questions/65058335/android-studio-database-inspector-always-showing-database-as-closed - Closer look at the main issue related to this report around inspecting SQLite databases.
