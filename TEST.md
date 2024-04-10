@@ -65,25 +65,66 @@ Attempt
               ">
     <div style="color: white; font-weight: bold; font-size: 35px; margin-bottom: 20px;">We make homes a better place to live</div>
     <div style="color: white; margin-bottom: 20px; width: 80%;">Keeping your home warm in winter, cool in summer, and energy efficent all year round</div>
-    <div style="background-color: white; padding: 20px;">Keeping your home warm in winter, cool in summer, and energy efficent all year round</div>
+    <div style="background-color: white; padding: 20px; width: 35%; text-align: center;">Get your fixed price</div>
     </div>
+  </div>
+  
+  <!-- rating bar -->
+  <div class="row aicenter jccenter">
     
+    <p style="margin-right: 10px;">Excellent</p>
+    <svg role="img" aria-labelledby="starRating-q9kya0czdma" viewBox="0 0 251 46" xmlns="http://www.w3.org/2000/svg" style="height: 100px; width: 100px; left: 0; top: 0;">
+      <title id="starRating-q9kya0czdma" lang="en">4.9 out of five star rating on Trustpilot</title>
+      <g class="tp-star">
+          <path class="tp-star__canvas" fill="#dcdce6" d="M0 46.330002h46.375586V0H0z"></path>
+          <path class="tp-star__shape" d="M39.533936 19.711433L13.230239 38.80065l3.838216-11.797827L7.02115 19.711433h12.418975l3.837417-11.798624 3.837418 11.798624h12.418975zM23.2785 31.510075l7.183595-1.509576 2.862114 8.800152L23.2785 31.510075z" fill="#FFF"></path>
+      </g>
+      <g class="tp-star">
+          <path class="tp-star__canvas" fill="#dcdce6" d="M51.24816 46.330002h46.375587V0H51.248161z"></path>
+          <path class="tp-star__canvas--half" fill="#dcdce6" d="M51.24816 46.330002h23.187793V0H51.248161z"></path>
+          <path class="tp-star__shape" d="M74.990978 31.32991L81.150908 30 84 39l-9.660206-7.202786L64.30279 39l3.895636-11.840666L58 19.841466h12.605577L74.499595 8l3.895637 11.841466H91L74.990978 31.329909z" fill="#FFF"></path>
+      </g>
+      <g class="tp-star">
+          <path class="tp-star__canvas" fill="#dcdce6" d="M102.532209 46.330002h46.375586V0h-46.375586z"></path>
+          <path class="tp-star__canvas--half" fill="#dcdce6" d="M102.532209 46.330002h23.187793V0h-23.187793z"></path>
+          <path class="tp-star__shape" d="M142.066994 19.711433L115.763298 38.80065l3.838215-11.797827-10.047304-7.291391h12.418975l3.837418-11.798624 3.837417 11.798624h12.418975zM125.81156 31.510075l7.183595-1.509576 2.862113 8.800152-10.045708-7.290576z" fill="#FFF"></path>
+      </g>
+      <g class="tp-star">
+          <path class="tp-star__canvas" fill="#dcdce6" d="M153.815458 46.330002h46.375586V0h-46.375586z"></path>
+          <path class="tp-star__canvas--half" fill="#dcdce6" d="M153.815458 46.330002h23.187793V0h-23.187793z"></path>
+          <path class="tp-star__shape" d="M193.348355 19.711433L167.045457 38.80065l3.837417-11.797827-10.047303-7.291391h12.418974l3.837418-11.798624 3.837418 11.798624h12.418974zM177.09292 31.510075l7.183595-1.509576 2.862114 8.800152-10.045709-7.290576z" fill="#FFF"></path>
+      </g>
+      <g class="tp-star">
+          <path class="tp-star__canvas" fill="#dcdce6" d="M205.064416 46.330002h46.375587V0h-46.375587z"></path>
+          <path class="tp-star__canvas--half" fill="#dcdce6" d="M205.064416 46.330002h23.187793V0h-23.187793z"></path>
+          <path class="tp-star__shape" d="M244.597022 19.711433l-26.3029 19.089218 3.837419-11.797827-10.047304-7.291391h12.418974l3.837418-11.798624 3.837418 11.798624h12.418975zm-16.255436 11.798642l7.183595-1.509576 2.862114 8.800152-10.045709-7.290576z" fill="#FFF"></path>
+      </g>
+    </svg>
+    <p style="margin-left: 10px; font-size: 12px;">4.9 out of 5 based on 28,194 reviews</p>
+        <iframe style="position: relative; height: 120px; width: 120px; border-style: none; display: block; overflow: hidden;" title="Customer reviews powered by Trustpilot" loading="auto" src="https://widget.trustpilot.com/trustboxes/5406e65db0d04a09e042d5fc/index.html?businessunitId=58b689650000ff00059d937d&amp;templateId=5406e65db0d04a09e042d5fc#locale=en-GB&amp;styleHeight=100%25&amp;styleWidth=100%25&amp;theme=light&amp;stars=&amp;tags="></iframe>
+   
+  </div>
+  
+  
+  <!-- Our partners element -->
+  <div class="col aicenter jccenter">
+    <div style="font-weight: bold; font-size: 25px;">Our Partners</div>
+    <div style="width: 100%; height: 150px;"></div>
+  </div>
+  
+  <!-- advert cards -->
+  <div style="col">
     
   </div>
   
   
   
+
+  
   
   
   
 </div>
-
-
-
-
-
-
-
 
 
 
@@ -108,6 +149,11 @@ Attempt
 .row{
   display: flex;
   flex-direction: row;
+}
+
+.col{
+  display: flex;
+  flex-direction: column;
 }
 
 .aicenter{
@@ -145,4 +191,8 @@ background: rgb(70, 178, 143);
   color: #2d3d4d;
   height: 3.75rem;
   padding: 1.125rem 1.5rem;
+}
+
+.flexwrap{
+  flex-wrap: wrap;
 }
