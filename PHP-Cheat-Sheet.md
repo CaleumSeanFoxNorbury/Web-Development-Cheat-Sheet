@@ -35,3 +35,62 @@ After this, we are able to create a PDF writer are able to save as a new temp fi
                 throw new Exception('Unsupported file type');
             }
 ```
+
+## Speeding Up Endpoints 
+
+Requests can be heavy duty specially around database queries and loops, but these can be simplified in many ways so our requests dont take as long to process as we can achieve high speed performance.
+
+```
+                    // improved request by at least a second
+                    $workTimesheetList = $oWorkTimesheet->getShiftsByDateRange($startDate, $endDate, "AND e.employeeTypeID = 1 AND e.depotID = ".$dbDepot['depotID']);
+
+                    if($workTimesheetList){
+                        $gatheredDates = [];
+                        foreach($workTimesheetList as $dbWorkTimesheet) {
+                            $sql_date = $dbWorkTimesheet['mysql_startDate'];
+                            if(!in_array($gatheredDates, $sql_date)){
+                                $valuesByDate = array_filter($workTimesheetList, function ($array) use ($sql_date) {
+                                    return $array['mysql_startDate'] === $sql_date;
+                                });
+
+                                $clockTimesList = $oAppClockIn->getAll("AND ac.employeeID IN (".implode(", ", array_column($valuesByDate, 'employeeID')).") AND DATE_FORMAT(ac.startDateTime, '%Y-%m-%d' ) BETWEEN '".min(array_column($valuesByDate, 'mysql_startDate'))."' AND '".max(array_column($valuesByDate, 'mysql_endDate'))."'");
+                                $clockinTotal = ($clockTimesList) ? count($clockTimesList) : 0;
+
+                                $percentage = round(($clockinTotal / count(array_unique(array_filter(array_column($valuesByDate, 'employeeID'))))) * 100, 2);
+                                $gatheredDates = array_column($valuesByDate, 'mysql_startDate');
+                            }
+                        }
+                    }
+
+                    // slow requests: embedded loops and query calls
+
+                    $dateArray = getMonthsInRange($startDate, $endDate);
+                    $percentages = [];
+                    foreach($dateArray as $date) {
+                        $workTimesheetList = $oWorkTimesheet->getShiftsByDate($date, "AND e.employeeTypeID = 1 AND e.depotID = ".$dbDepot['depotID'], true);
+
+                        if($workTimesheetList){
+                            $totalClockIns = 0;
+                            $totalEmployees = count(array_unique(array_filter(array_column($workTimesheetList, 'employeeID'))));
+                            $completedIDList = array();
+                            foreach($workTimesheetList as $dbWorkTimesheet) {
+                                if(!in_array($dbWorkTimesheet['employeeID'], $completedIDList)){
+                                    $clockTimesList = $oAppClockIn->getAll("AND ac.employeeID = ".$dbWorkTimesheet['employeeID']." AND DATE_FORMAT(ac.startDateTime, '%Y-%m-%d' ) = '".$dbWorkTimesheet['mysql_startDate']."'");
+                                    if($clockTimesList){
+                                        $totalClockIns++;
+                                    }
+                                    $completedIDList[] = $dbWorkTimesheet['employeeID'];
+                                }
+                            }
+                           $percentage = round(($totalClockIns / $totalEmployees) * 100, 2);
+
+                           $percentages[] = $percentage;
+                        } else {
+                            $depotData[] = [
+                                "depotName" => $dbDepot['name'],
+                                "date" => $date,
+                                "percentage" => "No Data"
+                            ];
+                        }
+                    }
+```
