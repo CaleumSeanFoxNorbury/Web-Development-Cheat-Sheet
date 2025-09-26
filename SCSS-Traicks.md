@@ -57,3 +57,95 @@ We may need both benefits of positioning types and this can be done by embeddedi
     </div>
 </div>`
 ```
+
+# block fixes for different size texts
+
+/* Option 1: Prevent text wrapping and maintain single line */
+.tfc-oc-grid-btn .elementor-button-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tfc-oc-grid-btn .elementor-button-content-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 50px; /* Adjust as needed */
+}
+
+/* Option 2: Allow wrapping but maintain proper alignment */
+.tfc-oc-grid-btn .elementor-button-content-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 60px; /* Increase to accommodate wrapped text */
+  gap: 10px;
+}
+
+.tfc-oc-grid-btn .elementor-button-text {
+  flex: 1;
+  line-height: 1.2;
+}
+
+.tfc-oc-grid-btn .elementor-button-icon {
+  flex-shrink: 0; /* Prevent icon from shrinking */
+  align-self: flex-start; /* Align icon to top when text wraps */
+  margin-top: 4px; /* Fine-tune vertical alignment */
+}
+
+/* Option 3: Use smaller font size for longer text */
+.tfc-oc-grid-btn .elementor-button-text {
+  font-size: clamp(12px, 2.5vw, 14px); /* Responsive font size */
+  line-height: 1.3;
+}
+
+.tfc-oc-grid-btn .elementor-button-content-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+}
+
+/* Option 4: Center multi-line text vertically */
+.tfc-oc-grid-btn .elementor-button-content-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 60px;
+}
+
+.tfc-oc-grid-btn .elementor-button-text {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  text-align: left;
+  line-height: 1.3;
+}
+
+/* Option 5: Make all buttons the same height */
+.tfc-oc-grid-btn .elementor-button {
+  height: 70px; /* Fixed height for all buttons */
+  display: flex;
+  align-items: center;
+}
+
+.tfc-oc-grid-btn .elementor-button-content-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 15px;
+}
+
+.tfc-oc-grid-btn .elementor-button-text {
+  flex: 1;
+  line-height: 1.2;
+  padding-right: 10px;
+}
+
+.tfc-oc-grid-btn .elementor-button-icon svg {
+  width: 25px; 
+  height: 25px;
+}
+```
