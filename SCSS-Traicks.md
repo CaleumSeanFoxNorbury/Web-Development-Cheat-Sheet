@@ -156,7 +156,7 @@ We may need both benefits of positioning types and this can be done by embeddedi
 
 Resize based on scale of the viewport, with standardised size values.
 
-***Example using h tags ***
+***Example using h tags***
 
 ```
 h1 {
