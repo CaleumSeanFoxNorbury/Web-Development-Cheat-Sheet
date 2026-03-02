@@ -60,6 +60,7 @@ We may need both benefits of positioning types and this can be done by embeddedi
 
 # block fixes for different size texts
 
+```
 /* Option 1: Prevent text wrapping and maintain single line */
 .tfc-oc-grid-btn .elementor-button-text {
   white-space: nowrap;
@@ -148,4 +149,25 @@ We may need both benefits of positioning types and this can be done by embeddedi
   width: 25px; 
   height: 25px;
 }
+
 ```
+
+### Clamp
+
+Resize based on scale of the viewport, with standardised size values.
+
+***Example using h tags ***
+
+```
+h1 {
+    font-size: clamp(24px, 4vw, 32px);
+}
+h2 {
+    font-size: clamp(20px, 3vw, 24px);
+}
+h3 {
+    font-size: clamp(16px, 2.5vw, 18px);
+}
+
+```
+
