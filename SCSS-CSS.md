@@ -171,3 +171,38 @@ h3 {
 
 ```
 
+### Conditional logic
+
+## SCSS
+
+```
+$theme: dark;
+
+.button {
+  @if $theme == dark {
+    background-color: black;
+    color: white;
+  } @else if $theme == anothertheme {
+    ...
+  } @else {
+    background-color: white;
+    color: black;
+  }
+}
+
+[data-theme="dark"] {
+  background: black;
+  color: white;
+}
+```
+
+## CSS
+
+```
+.element{
+    margin-top: 65px;
+}
+body:has(#outter-element.inner-element) .element{
+    margin-top: 100px;
+}
+```
